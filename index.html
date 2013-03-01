@@ -30,6 +30,45 @@
             </div>
           </div>
           
+          <script type="text/javascript">
+    function configureDropDownLists(ddl1,ddl2) {
+        var colours = new Array('Black', 'White', 'Blue');
+        var shapes = new Array('Square', 'Circle', 'Triangle');
+        var names = new Array('John', 'David', 'Sarah');
+
+        switch (ddl1.value) {
+            case 'Colours':
+                document.getElementById(ddl2).options.length = 0;
+                for (i = 0; i < colours.length; i++) {
+                    createOption(document.getElementById(ddl2), colours[i], colours[i]);
+                }
+                break;
+            case 'Shapes':
+                document.getElementById(ddl2).options.length = 0; 
+            for (i = 0; i < colours.length; i++) {
+                createOption(document.getElementById(ddl2), shapes[i], shapes[i]);
+                }
+                break;
+            case 'Names':
+                document.getElementById(ddl2).options.length = 0;
+                for (i = 0; i < colours.length; i++) {
+                    createOption(document.getElementById(ddl2), names[i], names[i]);
+                }
+                break;
+                default:
+                    document.getElementById(ddl2).options.length = 0;
+                break;
+        }
+
+    }
+
+    function createOption(ddl, text, value) {
+        var opt = document.createElement('option');
+        opt.value = value;
+        opt.text = text;
+        ddl.options.add(opt);
+    }
+</script>          
           <form class="well" style="background:#FDF5E6">
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large" >Country:</label>
             <select>
@@ -50,6 +89,18 @@
             <a href="http://travelgeeks.github.com/walkacity/paris.html" >
             <button class="btn" style="background:#2C3939; color:#FDF5E6">Explore!</button>
             </a>
+            
+            <select id="ddl" onchange="configureDropDownLists(this,'ddl2')">
+            <option value=""></option>
+            <option value="Colours">Colours</option>
+            <option value="Shapes">Shapes</option>
+            <option value="Names">Names</option>
+            </select>
+
+            <select id="ddl2">
+            </select>
+            
+            
           </form>
 
     </body>
