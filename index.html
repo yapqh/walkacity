@@ -68,6 +68,12 @@
           opt.text = text;
           ddl.options.add(opt);
       }
+      
+     function redirectTo() {
+       var text = ddl2.selectedvalue.text;
+        window.location = text+".html";
+     }
+      
     </script>          
           <form class="well" style="background:#FDF5E6">
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large" >Country:</label>
@@ -82,6 +88,8 @@
             </select>
             <button class="btn" style="background:#2C3939; color:#FDF5E6"">Explore!</button>
             <input type="button" onclick="window.location = 'paris.html';">
+            <button onclick="redirectTo()">Get HTML!</button>
+            
             
           </form>
 
