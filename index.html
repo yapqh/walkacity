@@ -30,26 +30,26 @@
             </div>
           </div>
           
-          <script type="text/javascript">
-    function configureDropDownLists(ddl1,ddl2) {
-        var colours = new Array('Black', 'White', 'Blue');
-        var shapes = new Array('Square', 'Circle', 'Triangle');
-        var names = new Array('John', 'David', 'Sarah');
+    <script type="text/javascript">
+      function configureDropDownLists(ddl1,ddl2) {
+        var france = new Array('Paris', 'Lyon');
+        var germany = new Array('Munich', 'Berlin');
+        var spain = new Array('Barcelona', 'Madrid');
 
         switch (ddl1.value) {
-            case 'Colours':
+            case 'France':
                 document.getElementById(ddl2).options.length = 0;
                 for (i = 0; i < colours.length; i++) {
                     createOption(document.getElementById(ddl2), colours[i], colours[i]);
                 }
                 break;
-            case 'Shapes':
+            case 'Germany':
                 document.getElementById(ddl2).options.length = 0; 
             for (i = 0; i < colours.length; i++) {
                 createOption(document.getElementById(ddl2), shapes[i], shapes[i]);
                 }
                 break;
-            case 'Names':
+            case 'Spain':
                 document.getElementById(ddl2).options.length = 0;
                 for (i = 0; i < colours.length; i++) {
                     createOption(document.getElementById(ddl2), names[i], names[i]);
@@ -62,44 +62,28 @@
 
     }
 
-    function createOption(ddl, text, value) {
-        var opt = document.createElement('option');
-        opt.value = value;
-        opt.text = text;
-        ddl.options.add(opt);
-    }
-</script>          
+      function createOption(ddl, text, value) {
+          var opt = document.createElement('option');
+          opt.value = value;
+          opt.text = text;
+          ddl.options.add(opt);
+      }
+    </script>          
           <form class="well" style="background:#FDF5E6">
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large" >Country:</label>
             <select>
-              <option value="" selected>--country--</option>
-              <option value="What">France</option>
+               <select id="ddl" onchange="configureDropDownLists(this,'ddl2')">
+              <option value="What" selected >France</option>
               <option value="ever">Germany</option>
               <option value="value">Sweden</option>
               <option value="needed">Spain</option>
             </select>
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large">City:</label>
-            <select>
-              <option value="" selected>--city--</option>
-              <option value="What">Paris</option>
-              <option value="ever">Lyon</option>
-              <option value="value">Toulouse</option>
-              <option value="needed">Bordeux</option>
+            <select id="ddl2">
             </select>
             <a href="http://travelgeeks.github.com/walkacity/paris.html" >
             <button class="btn" style="background:#2C3939; color:#FDF5E6">Explore!</button>
             </a>
-            
-            <select id="ddl" onchange="configureDropDownLists(this,'ddl2')">
-            <option value=""></option>
-            <option value="Colours">Colours</option>
-            <option value="Shapes">Shapes</option>
-            <option value="Names">Names</option>
-            </select>
-
-            <select id="ddl2">
-            </select>
-            
             
           </form>
 
