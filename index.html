@@ -73,7 +73,7 @@
           window.location = "http://www.google.com/";
       }
     </script>          
-          <form class="well" style="background:#FDF5E6" onSubmit="directMe(ddl2)">
+          <form class="well" style="background:#FDF5E6">
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large" >Country:</label>
               <select id="ddl" onchange="configureDropDownLists(this,'ddl2')">
               <option value=""></option>
@@ -84,8 +84,7 @@
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large">City:</label>
             <select id="ddl2">
             </select>
-            <a href="http://travelgeeks.github.com/walkacity/paris.html" >
-            <button class="btn" style="background:#2C3939; color:#FDF5E6">Explore!</button>
+            <button class="btn" style="background:#2C3939; color:#FDF5E6" onClick="directMe(ddl2)">Explore!</button>
             </a>
             
           </form>
