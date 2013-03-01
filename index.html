@@ -40,19 +40,19 @@
             case 'France':
                 document.getElementById(ddl2).options.length = 0;
                 for (i = 0; i < france.length; i++) {
-                    createOption(document.getElementById(ddl2), colours[i], colours[i]);
+                    createOption(document.getElementById(ddl2), france[i], france[i]);
                 }
                 break;
             case 'Germany':
                 document.getElementById(ddl2).options.length = 0; 
             for (i = 0; i < germany.length; i++) {
-                createOption(document.getElementById(ddl2), shapes[i], shapes[i]);
+                createOption(document.getElementById(ddl2), germany[i], germany[i]);
                 }
                 break;
             case 'Spain':
                 document.getElementById(ddl2).options.length = 0;
                 for (i = 0; i < spain.length; i++) {
-                    createOption(document.getElementById(ddl2), names[i], names[i]);
+                    createOption(document.getElementById(ddl2), spain[i], spain[i]);
                 }
                 break;
                 default:
