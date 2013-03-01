@@ -72,7 +72,9 @@
      function redirectTo() {
       var e = document.getElementById("ddl2");
       var str = e.options[e.selectedIndex].text;
-        window.location = str+".html";
+      if(str == "Paris"){
+        window.location = "paris.html";
+      }
      }
       
     </script>          
@@ -89,7 +91,6 @@
             </select>
             <button class="btn" style="background:#2C3939; color:#FDF5E6"">Explore!</button>
             <input type="button" onclick="window.location = 'paris.html';">
-            <button onclick="redirectTo()">Get HTML!</button>
             
             
           </form>
