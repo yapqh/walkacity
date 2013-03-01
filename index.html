@@ -68,8 +68,12 @@
           opt.text = text;
           ddl.options.add(opt);
       }
+      function directMe(ddl2) {
+          ddl2.text = text;
+          window.location = "http://www.google.com/";
+      }
     </script>          
-          <form class="well" style="background:#FDF5E6">
+          <form class="well" style="background:#FDF5E6" onSubmit="directMe(ddl2)">
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large" >Country:</label>
               <select id="ddl" onchange="configureDropDownLists(this,'ddl2')">
               <option value=""></option>
