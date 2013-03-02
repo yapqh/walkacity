@@ -68,6 +68,17 @@
           opt.text = text;
           ddl.options.add(opt);
       }
+      
+      
+      function redirectTo() {
+          var city = ddl2.options[ddl2.selectedIndex].text;
+          if (city == 'Paris'){
+            window.location = 'paris.html';
+          }else{
+            window.location = 'index.html';
+          }
+      }
+      
     </script>          
           <form class="well" style="background:#FDF5E6">
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large" >Country:</label>
@@ -81,7 +92,7 @@
             <select id="ddl2">
             </select>
             <button class="btn" onclick="window.location = 'paris.html';" style="background:#2C3939; color:#FDF5E6"">Explore!</button>
-            
+            <button onclick="redirectTo()">Get HTML!</button>
   
           </form>
 
