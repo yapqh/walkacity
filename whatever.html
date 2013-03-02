@@ -1,54 +1,28 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/slider.css">
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <script src="./js/jquery-1.7.2.min.js"></script>
+  <script src="./js/jquery-ui-1.8.20.custom.min.js"></script>
+  <script src="./js/jquery.coda-slider-3.0.js"></script>
 
-    <div class="row" id="row1">
-    <div class="dragbox" id="item1" >
-        <h2 class="dragbox-h2">Handle 1</h2>
-        <div class="dragbox-content" >
-        Phasellus porttitor adipiscing lacus ac tempus. Vivamus gravida augue metus, eu cursus nisl. 
-  </div>
-    </div>
-    <div class="dragbox" id="item2" >
-        <h2 class="dragbox-h2">Handle 2</h2>
-        <div class="dragbox-content" >
-            Phasellus porttitor adipiscing lacus ac tempus. Vivamus gravida augue metus, eu cursus nisl. 
-        </div>
-    </div>
-    <div class="dragbox" id="item3" >
-        <h2 class="dragbox-h2">Handle 3</h2>
-        <div class="dragbox-content" >
-            Proin porttitor euismod condimentum. Integer suscipit nibh nec augue facilisis ut commodo nisi ornare. 
-        </div>
-    </div>
-</div>
-<div class="row" id="row2" >
-    <div class="dragbox" id="item4" >
-        <h2 class="dragbox-h2">Handle 4</h2>
-        <div class="dragbox-content" >
-            Nullam metus magna, tristique vel ultrices a, molestie quis dolor. Curabitur porta porta ullamcorper. 
-        </div>
-    </div>
-    <div class="dragbox" id="item5" >
-        <h2 class="dragbox-h2">Handle 5</h2>
-        <div class="dragbox-content" >
-            Nam rhoncus sodales libero, et facilisis nisi volutpat et. Nullam tellus eros, consequat eget tristique ultricies, rhoncus vitae magna. 
-        </div>
-    </div>
-</div>
-          
-          
-    
+  <script>
+      $(function() {
+          $('#slider-id').codaSlider();
+      });
+  </script>
+  </head>
+
+  <body>
+      <div class="coda-slider" id="slider-id">
+          <div>
+              <h2 class="title">Panel 1</h2>
+              //Content goes here
+          </div>
+          <div>
+              <h2 class="title">Panel 2</h2>
+              //Content goes here
+          </div>
+      </div>
   </body>
 </html>
