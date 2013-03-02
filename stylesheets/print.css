@@ -18,6 +18,20 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
+
+/*just added in*/
+.row{
+height:50%;
+background:#fff;
+overflow-y:auto;
+}
+
+.row .dragbox{
+margin:5px 2px  20px;
+background:#fff;
+border:1px solid #ddd;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
