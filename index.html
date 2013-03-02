@@ -70,7 +70,14 @@
       }
 
       function redirectTo() {
-        window.location = "paris.html";
+        var citylist = document.getElementById("ddl2");
+        var city = citylist.options[citylist.selectedIndex].text;
+        if(city == 'Paris'){
+          window.location = "paris.html";
+        }else{
+          window.location = "hello.html";
+        }
+        
       }
       
     </script>          
