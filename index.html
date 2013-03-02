@@ -70,10 +70,7 @@
       }
       
       
-      function redirectTo() {
-          var city = ddl2.options[ddl2.selectedIndex].text;
-            window.location = 'www.google.com';
-      }
+      $('explore').click(function(){ window.location = 'www.google.com'});
       
     </script>          
           <form class="well" style="background:#FDF5E6">
@@ -87,8 +84,7 @@
             <label style="font-style:bold; font-family:'Calibri',sans serif; color:#000080; font-size:large">City:</label>
             <select id="ddl2">
             </select>
-            <button class="btn" onclick="window.location = 'paris.html';" style="background:#2C3939; color:#FDF5E6"">Explore!</button>
-            <button onclick="redirectTo()">Get HTML!</button>
+            <button id="explore" class="btn" style="background:#2C3939; color:#FDF5E6"">Explore!</button>
   
           </form>
 
